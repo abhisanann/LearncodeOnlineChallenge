@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<title>LCO Challenge</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+body {font-family: "Open Sans"}
+.button1234 {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 22px;
+  padding: 20px;
+  width: 200px;
+  transition: all 1.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button1234 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button1234 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button1234:hover span {
+  padding-right: 25px;
+}
+
+.button1234:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+<body class="w3-light-grey">
+
+<!-- Navigation bar with social media icons -->
+<div class="w3-bar w3-orange w3-hide-small">
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-facebook-official"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-snapchat"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-flickr"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
+</div>
+  
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content w3-black" style="max-width:1600px">
+
+  <!-- Header -->
+  <header class="w3-container w3-center w3-padding-48 w3-white">
+    <h1 class="w3-xxxlarge" ><b>LearnCodeOnline</b></h1>
+    <h6>Welcome to the blog of <span class="w3-tag">Hitesh_Chaudhary</span></h6>
+      <h6><button class="w3-button w3-black w3-padding-large w3-large w3-opacity w3-hover-opacity-off" onclick="document.getElementById('subscribe').style.display='block'">SUBSCRIBE</button></h6>
+  </header>
+
+  <!-- Image header -->
+  <header class="w3-display-container w3-wide w3-center" id="home">
+    <img class="w3-image" src="https://d31v04zdn5vmni.cloudfront.net/blog/wp-content/uploads/2017/05/builder-essentials-2-code-views.gif" alt="Coding_GIF" width="900" height="1060">
+    <div class="w3-display-right w3-padding-large">
+      <h1 class="w3-text-black"></h1>
+      <h1 class="w3-jumbo w3-text-Black w3-hide-small"><b></b></h1>
+      
+    </div>
+  </header>
+
+  <!-- Grid -->
+  <div class="w3-row w3-padding w3-border">
+
+    <!-- Blog entries -->
+    <div class="w3-col l8 s12">
+    
+      <!-- Blog entry -->
+      <div class="w3-container w3-black
+                  w3-margin w3-padding-large">
+        <div class="w3-center">
+            <h3><u>Our Core Values</u></h3>
+          <h5>.C.O.D.I.N.G.</h5>
+        </div>
+
+        <div class="w3-justify">
+          <img src="https://www.bco.ie/wp-content/uploads/2012/01/coding-banner.jpg" alt="Girl Hat" style="width:100%" class="w3-padding-16">
+            <p><strong>Coding may refer to:</strong></br></br> Computer programming is the process of designing and building an executable computer program for accomplishing a specific computing task. Programming involves tasks such as analysis, generating algorithms, profiling algorithms' accuracy and resource consumption, and the implementation of algorithms in a chosen programming language. The source code of a program is written in one or more programming languages. The purpose of programming is to find a sequence of instructions that will automate the performance of a task for solving a given problem. The process of programming thus often requires expertise in several different subjects, including knowledge of the application domain, specialized algorithms, and formal logic.
+</p>
+          <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+          <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo1')" id="myBtn"><b>Replies  </b> <span class="w3-tag w3-orange">1</span></button></p>
+          <p class="w3-clear"></p>
+          <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
+            <hr>
+              <div class="w3-col l2 m3">
+                <img src="data:image/png;base64,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" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Abhishek <span class="w3-opacity w3-medium">May 3, 2015, 6:32 PM</span></h4>
+                <p>Great blog post! Following</p>
+              </div>
+              
+          </div>
+        </div>
+      </div>
+      <hr>
+
+      
+
+      <!-- Blog entry -->
+      <div class="w3-container w3-black w3-margin w3-padding-large">
+        <div class="w3-center">
+          <h1>LCO at campus</h1>
+          
+        </div>
+
+        <div class="w3-center">
+          <img src="https://i.pinimg.com/236x/60/70/02/6070023b4a3156014b3755220d1a1358--logodesign-logo-template.jpg" alt="Runway" style="width:30%" class="w3-padding-16">
+            <p><strong>>> O.F.FL.I.N.E.T.A.L.K.S.</strong> </br></br>Interacting with students directly at the campus is our favorite thing. IIT Bombay, IIT Patna, SRM, VIT are just some to name</p>
+          
+          <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+          <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo3')"><b>Replies  </b> <span class="w3-tag w3-orange">3</span></button></p>
+          <p class="w3-clear"></p>
+          
+          <!-- Example of comment field -->
+          <div id="demo3" style="display:none">
+            <hr>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="/w3images/girl_mountain.jpg" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Rajan Manjrekar <span class="w3-opacity w3-medium">Jan 10, 2019, 7:22 PM</span></h4>
+                <p>Great Platform To Boost Your Career.</p>
+              </div>
+            </div>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="/w3images/boy.jpg" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Sanju <span class="w3-opacity w3-medium">Dec 18, 2018, 10:32 PM</span></h4>
+                <p>I Polish my Skills from LearnCodeOnline, Hiitesh Sir U r the Best...</p>
+              </div>
+            </div>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="/w3images/girl_hood.jpg" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Abhishek <span class="w3-opacity w3-medium">Jan 7, 2019, 9:12 PM</span></h4>
+                <p>If you want to learn programming just follow LearnCodeOnline.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    <!-- END BLOG ENTRIES -->
+    </div>
+
+    <!-- About/Information menu -->
+    <div class="w3-col l4">
+      <!-- About Card -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-black">
+            <h4><u>Hitesh Chaudhary</u></h4>
+          <p>We are building an online community of programmers, if you are interested in programming, JOIN US..... !</p>
+        </div>
+      </div>
+      <hr>
+
+      <!-- Posts -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+            <h4>What We Serve..</h4>
+        </div>
+        <ul class="w3-ul w3-hoverable w3-white">
+          <li class="w3-padding-16">
+            <img src="https://icons-for-free.com/free-icons/png/512/682682.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Javascript</span>
+            <br>
+            <span> High-level, Interpreted programming language </span>
+          </li>
+          <li class="w3-padding-16">
+            <img src="http://www.pngall.com/wp-content/uploads/2016/05/Python-Logo.png" style="width:50px">
+            <span class="w3-large">. Python</span>
+            <br>
+            <span></span>
+          </li>
+          <li class="w3-padding-16">
+            <img src="https://tideways.com/img/logos/postgresql_logo.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">PHP</span>
+            <br>
+            <span>Server-Side Scripting Language</span>
+          </li>
+          <li class="w3-padding-16">
+            <img src="https://udemy-images.udemy.com/course/750x422/309548_0302_7.jpg" alt="Image" class="w3-left w3-margin-right w3-sepia" style="width:60px">
+            <span class="w3-large">C++</span>
+            <br>
+            <span>Lorem ipsum dipsum</span>
+          </li>
+        </ul>
+      </div>
+      <hr>
+
+     
+
+      <!-- Tags -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Trending Box</h4>
+        </div>
+        <div class="w3-container w3-white">
+          <p>
+            <span class="w3-tag w3-black w3-margin-bottom">Javascript</span> <span class="w3-tag w3-pink w3-small w3-margin-bottom">C</span> <span class="w3-tag w3-black w3-small w3-margin-bottom">C++</span>
+            <span class="w3-tag w3-pink w3-small w3-margin-bottom">C#</span> <span class="w3-tag w3-black w3-small w3-margin-bottom">Java</span> <span class="w3-tag w3-pink w3-small w3-margin-bottom">Python</span>
+            <span class="w3-tag w3-black w3-small w3-margin-bottom">PHP</span> <span class="w3-tag w3-pink w3-small w3-margin-bottom">SQL</span> <span class="w3-tag w3-black w3-small w3-margin-bottom">Oracle</span>
+            <span class="w3-tag w3-pink w3-small w3-margin-bottom">Swift</span> <span class="w3-tag w3-black w3-small w3-margin-bottom">MongoDB</span> <span class="w3-tag w3-pink w3-small w3-margin-bottom">VB</span>
+            <span class="w3-tag w3-black w3-small w3-margin-bottom">NOdeJs</span> <span class="w3-tag w3-pink w3-small w3-margin-bottom">Angular JS</span>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <!-- Inspiration -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Inspiration</h4>
+        </div>
+        <div class="w3-row-padding w3-white">
+          <div class="w3-col s6">
+            <p><img src="http://i2.cdn.turner.com/cnn/2009/TECH/06/22/steve.jobs.apple.return/art.jobs.gi.jpg" alt="Jeans" style="width:50%"></p>
+            <p><img src="https://amp.businessinsider.com/images/5b1fd86c1ae66245008b4f7a-750-563.jpg" alt="Jeans" style="width:50%"></p>
+          </div>
+          <div class="w3-col s6">
+            <p><img src="https://specials-images.forbesimg.com/imageserve/5ba415b6a7ea434e4c694719/416x416.jpg?background=000000&cropX1=1503&cropX2=4716&cropY1=21&cropY2=3236" alt="Men in Hats" style="width:40%" class="w3-grayscale"></p>
+            <p><img src="https://lh3.googleusercontent.com/QxXLLvZPovr2Ob1kKV2LdOsxZhTe4rsxWTXtib-qXSxCALJoUKP8WpUTNPlqox5JkJcJ88dHX1AdTSADsZHQADywUQMY5bM=s1000" alt="Jeans" style="width:50%"></p>
+         </div>
+        </div>
+      </div>
+      <hr>
+
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Follow Me</h4>
+        </div>
+        <div class="w3-container w3-xlarge w3-padding">
+          <i class="fa fa-facebook-official w3-hover-opacity"></i>
+          <i class="fa fa-instagram w3-hover-opacity"></i>
+          <i class="fa fa-snapchat w3-hover-opacity"></i>
+          <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+          <i class="fa fa-twitter w3-hover-opacity"></i>
+          <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+      </div>
+      <hr>
+      
+      <!-- Subscribe -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Subscribe</h4>
+        </div>
+        <div class="w3-container w3-white">
+          <p>Enter your e-mail below and get notified on the latest blog posts.</p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
+          <p><button type="button" onclick="document.getElementById('subscribe').style.display='block'" class="w3-button w3-block w3-red">Subscribe</button></p>
+        </div>
+      </div>
+
+    <!-- END About/Intro Menu -->
+    </div>
+
+  <!-- END GRID -->
+  </div>
+
+<!-- END w3-content -->
+</div>
+
+<!-- Subscribe Modal -->
+<div id="subscribe" class="w3-modal w3-animate-opacity">
+  <div class="w3-modal-content" style="padding:32px">
+    <div class="w3-container w3-white">
+      <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
+      <h2 class="w3-wide">SUBSCRIBE</h2>
+      <p>Join my mailing list to receive updates on the latest blog posts and other things.</p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-white" style="padding:32px">
+  <div class="w3-container w3-padding-64" id="contact">
+    <h1 class="w3-center">Contact Us</h1><br>
+    
+    <p class="w3-text-orange w3-large w3-center"><b>Catering Service, 42nd Living St, 43043 New York, NY</b></p>
+      <p class="w3-text-orange w3-large w3-center">You can also contact us by phone 00553123-2323 or email At <b class="w3-text-black w3-large ">hitesh@LCO.com</b>, or you can send us a message here:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16" type="number" placeholder="Your Email Address" required name="People"></p>
+      <p><input class="w3-input w3-padding-16" type="datetime-local" placeholder="Date and time" required name="date" value="2017-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <p><button class="w3-button w3-orange w3-section" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+  
+  <p><a href="https://www.w3schools.com/w3css/default.asp" title="" target="_blank" class="w3-hover-text-green"></a></p>
+</footer>
+
+
+
+
+<script>
+// Toggle between hiding and showing blog replies/comments
+document.getElementById("myBtn").click();
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+function likeFunction(x) {
+  x.style.fontWeight = "bold";
+  x.innerHTML = "✓ Liked";
+}
+</script>
+
+</body>
+</html>
